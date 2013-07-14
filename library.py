@@ -90,3 +90,5 @@ def logout():
 
 if __name__ == '__main__':
     app.run()
+    # Use the following line to run app publicly:
+    # app.run(host='0.0.0.0')
