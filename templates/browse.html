@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_book') }}" method=post class=add-book>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title>
+        <dt>Author:
+        <dd><input type=text size=30 name=title>
+        <dd><input type=submit value=Add>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=entries>
+  {% for book in books %}
+    <li><h2>{{ book.title }}</h2>by {{ book.author }}
+  {% else %}
+    <li><em>Unbelievable.  No books here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
