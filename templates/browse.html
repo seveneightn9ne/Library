@@ -11,11 +11,15 @@
       </dl>
     </form>
   {% endif %}
-  <ul class=entries>
+
+  <div class="shelf">
   {% for book in books %}
-    <li><h2>{{ book.title }}</h2>by {{ book.author }}
+    <div class="book">
+      <div class="icon default"></div>
+      <h2>{{ book.title }}</h2>
+      <p>by {{ book.author }}</p>
+    </div>
   {% else %}
-    <li><em>Unbelievable.  No books here so far</em>
+    <p>Unbelievable.  No books here so far</p>
   {% endfor %}
-  </ul>
 {% endblock %}

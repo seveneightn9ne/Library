@@ -216,3 +216,6 @@ pip-log.txt
 
 # Virtual env
 venv/
+
+# LESS CSS
+static/style/*.css

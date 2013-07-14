@@ -14,6 +14,11 @@ PASSWORD = 'default'
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+# enable LESS CSS
+if app.debug:
+    from flaskext.lesscss import lesscss
+    lesscss(app)
+
 def init_db():
     with closing(connect_db()) as db:
         with app.open_resource('schema.sql', mode='r') as f:
