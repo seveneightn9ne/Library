@@ -36,7 +36,7 @@ def teardown_request(exception):
 @app.route('/')
 def browse():
     cur = g.db.execute('select title, author from books order by id desc')
-    entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
+    books = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
     return render_template('browse.html', books=books)
 
 @app.route('/add', methods=['POST'])
