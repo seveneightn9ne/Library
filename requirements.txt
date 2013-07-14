@@ -1,0 +1,7 @@
+Flask==0.10.1
+Jinja2==2.7
+MarkupSafe==0.18
+Werkzeug==0.9.1
+-e git+http://github.com/sjl/flask-lesscss.git@87744a2ed5a0e9e312f627e9ab1b59066062e61e#egg=flask_lesscss-dev
+itsdangerous==0.22
+wsgiref==0.1.2
